@@ -18,39 +18,46 @@ function replacename() {
 
 // FONCTION CHANGEMENT ETAT CASE 
 
-function change_case_o() {
-    let TOUR = document.querySelectorAll('.btn1');
-    // TOUR.innerHTML = '<p>O</p>';
-    let i = 0;
-    while(i<TOUR.length) {
-        TOUR[i].innerHTML='<p>O</p>';
-        i= i+1;
-    }
+function change_case_o(TOUR) {
+    //let TOUR = document.querySelector('.btn1');
+    TOUR.innerHTML = '<p>O</p>';
+    // let i = 0;
+    // while(i<TOUR.length) {
+    //     TOUR[i].innerHTML='<p>O</p>';
+    //     i= i+1;
+    // }
 }
 
-function change_case_x() {
-    let TOUR = document.querySelectorAll('.btn1');
-    // TOUR.innerHTML = '<p>X</p>';
-    let i = 0;
-    while(i<TOUR.length) {
-        TOUR[i].innerHTML='<p>X</p>';
-        i= i+1;
-    }
+function change_case_x(TOUR) {
+    //let TOUR = document.querySelector('.btn1');
+    TOUR.innerHTML = '<p>X</p>';
+    // let i = 0;
+    // while(i<TOUR.length) {
+    //     TOUR[i].innerHTML='<p>X</p>';
+    //     i= i+1;
+    // }
 }
 
-function radio_player() {
+function radio_player(evt) {
+    console.log(evt);
     const RADIO1 = document.querySelector('input[name=radio]:checked').value;
           
     if(RADIO1 == 0) {
-        change_case_o();
+        change_case_o(evt.target);
         
     } else {
-        change_case_x();        
+        change_case_x(evt.target);        
     }
 }
 
 function onclick_grille() {
-    document.querySelector('.btn1').addEventListener('click', radio_player);
+    let test = document.querySelectorAll('.btn1');
+    let i=0;
+    while (i<test.length){
+        test[i].addEventListener('click', radio_player);
+        i++;    
+    }
+    
 }
 
 
