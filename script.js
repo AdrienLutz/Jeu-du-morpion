@@ -15,4 +15,9 @@ function replacename() {
     
 }
 
+function changebg() {
+    
+}
+
 window.addEventListener('load', replacename);
+
