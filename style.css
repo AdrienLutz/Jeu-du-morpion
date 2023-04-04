@@ -21,4 +21,10 @@ h1{
     background: #333;
 }
 
+.abled {
+    display: block;
+}
 
+.disabled {
+    display: none;
+}
