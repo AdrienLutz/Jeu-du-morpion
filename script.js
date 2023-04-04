@@ -19,22 +19,24 @@ function replacename() {
 // FONCTION CHANGEMENT ETAT CASE 
 
 function change_case_o() {
-    let TOUR = document.querySelector('#btn1');
-    TOUR.innerHTML = '<p>O</p>';
+    let TOUR = document.querySelectorAll('.btn1');
+    // TOUR.innerHTML = '<p>O</p>';
+    let i = 0;
+    while(i<TOUR.length) {
+        TOUR[i].innerHTML='<p>O</p>';
+        i= i+1;
+    }
 }
 
 function change_case_x() {
-    let TOUR = document.querySelector('#btn1');
-    TOUR.innerHTML = '<p>X</p>';
+    let TOUR = document.querySelectorAll('.btn1');
+    // TOUR.innerHTML = '<p>X</p>';
+    let i = 0;
+    while(i<TOUR.length) {
+        TOUR[i].innerHTML='<p>X</p>';
+        i= i+1;
+    }
 }
-
-
-function onclick_grille() {
-    document.querySelector('#btn1').addEventListener('click', radio_player);
-}
-
-
-// FONCTION JOUEUR 1 / JOUEUR 2
 
 function radio_player() {
     const RADIO1 = document.querySelector('input[name=radio]:checked').value;
@@ -46,6 +48,15 @@ function radio_player() {
         change_case_x();        
     }
 }
+
+function onclick_grille() {
+    document.querySelector('.btn1').addEventListener('click', radio_player);
+}
+
+
+// FONCTION JOUEUR 1 / JOUEUR 2
+
+
 
 
 
