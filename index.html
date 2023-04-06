@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Tic Tac Toe</title>
 </head>
+
 <body>
-    
+    <h1>Bienvenue sur le jeu du Morpion</h1>
+
+    <div class="grille">
+        <div id="case1" class="case red blue"><button id="idbtn1" class="btn1"></button></div>
+        <div id="case2" class="case red blue"><button id="idbtn2" class="btn1"></button></div>
+        <div id="case3" class="case red blue"><button id="idbtn3" class="btn1"></button></div>
+        <div id="case4" class="case red blue"><button class="btn1"></button></div>
+        <div id="case5" class="case red blue"><button class="btn1"></button></div>
+        <div id="case6" class="case red blue"><button class="btn1"></button></div>
+        <div id="case7" class="case red blue"><button class="btn1"></button></div>
+        <div id="case8" class="case red blue"><button class="btn1"></button></div>
+        <div id="case9" class="case red blue"><button class="btn1"></button></div>
+    </div>
+
+<section id="players-names">
+    <form action="">
+        <label for="player1-name">Joueur 1, veuillez entrer votre prénom :</label>
+        <input type="text" name="player1-name" value="" id="player1-name">
+        <label for="player2-name">Joueur 2, veuillez entrer votre prénom :</label>
+        <input type="text" name="player2-name" value="" id="player2-name">
+        <input type="button" value="JOUEZ !" id="btn-start-game">
+    </form>
+</section>
+
+<!-- <section id="players-score">
+    <p id="player1-score"></p>
+    <p id="player2-score"></p>
+</section> -->
+
+<section id="players-radio">
+<input type="radio" id="radio1" name="radio" value="0">
+<label for="radio1"><span id="player1-score">Player 1</span></label>
+<input type="radio" id="radio2" name="radio" value="1">
+<label for="radio2"><span id="player2-score">Player 2</span></label>
+</section>
+
+
 </body>
+
 </html>
